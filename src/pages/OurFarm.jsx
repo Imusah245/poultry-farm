@@ -51,7 +51,7 @@ export default function OurFarm() {
               <SectionHeader label="Farm Overview" title="Built for Scale, Managed with Care" />
               <div className="space-y-4 text-farm-dark/70 leading-relaxed">
                 <p>
-                  Darajat Farms sits on 5 acres of land on the outskirts of Accra. Established in 2009, the farm has grown from a 500-bird backyard operation to a commercial facility housing over 8,500 birds at peak capacity.
+                  Darajat Farms sits on 5 acres of land on the outskirts of Accra. Established in 2010, the farm has grown from a 500-bird backyard operation to a commercial facility housing over 8,500 birds at peak capacity.
                 </p>
                 <p>
                   We operate two production lines: a layer unit for daily egg production and a broiler unit running multiple overlapping 6-week cycles. Both units follow strict all-in all-out management to maintain biosecurity.

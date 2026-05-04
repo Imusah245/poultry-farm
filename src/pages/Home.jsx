@@ -45,7 +45,7 @@ export default function Home() {
         <div className="relative z-10 container-max section pt-32">
           <div className="max-w-2xl">
             <span className="badge !bg-farm-yellow/20 !text-farm-yellow-light mb-5 inline-flex animate-fade-in">
-              🌿 Farm Fresh Since 2009
+              🌿 Farm Fresh Since 2010
             </span>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight text-balance mb-6 animate-fade-up">
               Fresh Eggs &amp; Quality Broilers You Can Trust

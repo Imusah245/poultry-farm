@@ -49,7 +49,7 @@ export default function About() {
               <SectionHeader label="Our Story" title="How Darajat Farms Began" />
               <div className="space-y-4 text-farm-dark/70 leading-relaxed">
                 <p>
-                  Darajat Farms was founded in 2009 by Abdul Rauf Abubakar, an agricultural science graduate who believed that Ghana's urban food chain deserved a better class of egg. Starting with 500 Lohmann Brown pullets in a self-built wooden shed on his family's land, Abdul Rauf sold to neighbours and a handful of local restaurants.
+                  Darajat Farms was founded in 2010 by Abdul Rauf Abubakar, an agricultural science graduate who believed that Ghana's urban food chain deserved a better class of egg. Starting with 500 Lohmann Brown pullets in a self-built wooden shed on his family's land, Abdul Rauf sold to neighbours and a handful of local restaurants.
                 </p>
                 <p>
                   The philosophy was simple: never cut corners on feed, biosecurity, or bird welfare. That philosophy — stubbornly maintained through difficult commodity price cycles and disease pressures — built a reputation that marketing money couldn't buy.
@@ -62,7 +62,7 @@ export default function About() {
             {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-4 reveal">
               {[
-                { v: '2009', l: 'Year Founded' },
+                { v: '2010', l: 'Year Founded' },
                 { v: '8,500+', l: 'Birds at Peak' },
                 { v: '12', l: 'Full-Time Staff' },
                 { v: '200+', l: 'Wholesale Clients' },

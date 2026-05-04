@@ -37,7 +37,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-5 max-w-xs">
-              Delivering farm-fresh eggs and premium broilers with uncompromising quality and biosecurity standards since 2009.
+              Delivering farm-fresh eggs and premium broilers with uncompromising quality and biosecurity standards since 20010.
             </p>
             <div className="flex flex-col gap-2 text-sm text-white/60">
               <a href="tel:+233552866857" className="flex items-center gap-2 hover:text-farm-yellow transition-colors">

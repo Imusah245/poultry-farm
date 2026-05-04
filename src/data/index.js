@@ -6,7 +6,7 @@ export const COMPANY = {
   phone: '+233 552866857, +233 244652431',
   email: 'originalbarhoum@gmail.com',
   address: 'Accra, Greater Accra Region, Ghana',
-  founded: 2009,
+  founded: 2010,
 }
 
 export const STATS = [
