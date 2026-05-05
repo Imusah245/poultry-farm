@@ -1,28 +1,28 @@
 import { Egg, Wheat, Home, Package, ShieldCheck, Truck } from 'lucide-react'
 import { PageHero, SectionHeader, ProcessFlow, FeatureCard, CTABanner } from '../components/ui'
 import { useScrollReveal } from '../hooks/useScrollReveal'
-
+import { Link } from 'react-router-dom';
 const GROWTH_CYCLE = [
-  { day: 'Day 1',    weight: '~42g',    note: 'Day-old chicks arrive. Warm brooders, fresh water, starter crumbles.' },
-  { day: 'Week 1',   weight: '~180g',   note: 'High-protein starter feed. Brooder temperature gradually reduced.' },
-  { day: 'Week 2',   weight: '~420g',   note: 'Transition to grower feed. Full feather coverage.' },
-  { day: 'Week 3',   weight: '~850g',   note: 'Rapid growth phase. Feed and water access maximised.' },
-  { day: 'Week 4',   weight: '~1.4kg',  note: 'Litter management intensified. Ventilation adjusted.' },
-  { day: 'Week 5',   weight: '~2.0kg',  note: 'Pre-finisher phase. FCR monitored daily.' },
-  { day: 'Week 6',   weight: '~2.5kg',  note: 'Ready-for-market weight. Live birds or processing.' },
+  { day: 'Day 1', weight: '~42g', note: 'Day-old chicks arrive. Warm brooders, fresh water, starter crumbles.' },
+  { day: 'Week 1', weight: '~180g', note: 'High-protein starter feed. Brooder temperature gradually reduced.' },
+  { day: 'Week 2', weight: '~420g', note: 'Transition to grower feed. Full feather coverage.' },
+  { day: 'Week 3', weight: '~850g', note: 'Rapid growth phase. Feed and water access maximised.' },
+  { day: 'Week 4', weight: '~1.4kg', note: 'Litter management intensified. Ventilation adjusted.' },
+  { day: 'Week 5', weight: '~2.0kg', note: 'Pre-finisher phase. FCR monitored daily.' },
+  { day: 'Week 6', weight: '~2.5kg', note: 'Ready-for-market weight. Live birds or processing.' },
 ]
 
 const PROCESS = [
-  { icon: Egg,        title: 'Day-Old Chicks', desc: 'Sourced from certified hatcheries with Marek\'s vaccination.' },
-  { icon: Wheat,      title: 'Feeding Program', desc: 'Starter → Grower → Finisher. Balanced for optimal FCR.' },
-  { icon: Home,       title: 'Housing',         desc: 'Deep-litter houses with automated ventilation and heating.' },
-  { icon: Package,    title: 'Processing',      desc: 'On-farm or certified abattoir. Hygienic packaging.' },
+  { icon: Egg, title: 'Day-Old Chicks', desc: 'Sourced from certified hatcheries with Marek\'s vaccination.' },
+  { icon: Wheat, title: 'Feeding Program', desc: 'Starter → Grower → Finisher. Balanced for optimal FCR.' },
+  { icon: Home, title: 'Housing', desc: 'Deep-litter houses with automated ventilation and heating.' },
+  { icon: Package, title: 'Processing', desc: 'On-farm or certified abattoir. Hygienic packaging.' },
 ]
 
 const PRODUCT_OPTIONS = [
-  { emoji: '🐔', title: 'Live Birds',       desc: 'Available every 6–8 weeks. Minimum order: 50 birds. Ideal for local markets, individuals, and small processors.' },
-  { emoji: '🥩', title: 'Dressed Chicken',  desc: 'Whole birds cleaned and packaged. Available fresh or chilled. Suitable for hotels, restaurants, and supermarkets.' },
-  { emoji: '🍗', title: 'Cut Portions',     desc: 'Breast, thigh, drumstick, wings. Custom cuts available for bulk orders. Coming soon.' },
+  { emoji: '🐔', title: 'Live Birds', desc: 'Available every 6–8 weeks. Minimum order: 50 birds. Ideal for local markets, individuals, and small processors.' },
+  { emoji: '🥩', title: 'Dressed Chicken', desc: 'Whole birds cleaned and packaged. Available fresh or chilled. Suitable for hotels, restaurants, and supermarkets.' },
+  { emoji: '🍗', title: 'Cut Portions', desc: 'Breast, thigh, drumstick, wings. Custom cuts available for bulk orders. Coming soon.' },
 ]
 
 export default function BroilerProduction() {
@@ -36,8 +36,12 @@ export default function BroilerProduction() {
         subtitle="High-performance Ross 308 and Cobb 500 birds raised on balanced feed for superior meat yield and taste."
         cta={
           <>
-            <a href="/contact" className="btn-yellow">Order Broilers</a>
-            <a href="/partnerships" className="btn-secondary !border-white !text-white hover:!bg-white/10">Bulk Pricing</a>
+            <Link to="/contact" className="btn-yellow">
+              Order Broilers
+            </Link>
+            <Link to="/partnerships" className="btn-secondary !border-white !text-white hover:!bg-white/10">
+              Bulk Pricing
+            </Link>
           </>
         }
       />
@@ -100,12 +104,12 @@ export default function BroilerProduction() {
         <div className="container-max">
           <SectionHeader label="Our Standards" title="Housing & Biosecurity" />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 reveal">
-            <FeatureCard icon={Home}       title="Deep-Litter Housing"  desc="Properly ventilated houses with controlled humidity and temperature. Wood shavings litter changed between batches." />
-            <FeatureCard icon={ShieldCheck} title="All-In All-Out"      desc="Only one age group per house at any time, preventing cross-contamination between production cycles." />
-            <FeatureCard icon={Wheat}       title="Antibiotic Policy"   desc="No prophylactic antibiotics. Growth promoters strictly prohibited. Withdrawal periods observed." />
-            <FeatureCard icon={Truck}       title="Controlled Access"   desc="Visitor logbook, protective clothing, and disinfectant footbaths at all house entrances." />
-            <FeatureCard icon={Package}     title="Feed Quality"        desc="Feed sourced from accredited mills with full ingredient traceability and mycotoxin testing." />
-            <FeatureCard icon={Egg}         title="Vaccination Program" desc="Marek's disease, Newcastle, IBD, and IB vaccines administered per schedule by licensed vet." />
+            <FeatureCard icon={Home} title="Deep-Litter Housing" desc="Properly ventilated houses with controlled humidity and temperature. Wood shavings litter changed between batches." />
+            <FeatureCard icon={ShieldCheck} title="All-In All-Out" desc="Only one age group per house at any time, preventing cross-contamination between production cycles." />
+            <FeatureCard icon={Wheat} title="Antibiotic Policy" desc="No prophylactic antibiotics. Growth promoters strictly prohibited. Withdrawal periods observed." />
+            <FeatureCard icon={Truck} title="Controlled Access" desc="Visitor logbook, protective clothing, and disinfectant footbaths at all house entrances." />
+            <FeatureCard icon={Package} title="Feed Quality" desc="Feed sourced from accredited mills with full ingredient traceability and mycotoxin testing." />
+            <FeatureCard icon={Egg} title="Vaccination Program" desc="Marek's disease, Newcastle, IBD, and IB vaccines administered per schedule by licensed vet." />
           </div>
         </div>
       </section>

@@ -4,7 +4,7 @@ export const COMPANY = {
   name: 'Darajat Farms',
   tagline: 'Fresh Eggs & Quality Broilers You Can Trust',
   phone: '+233 552866857, +233 244652431',
-  email: 'originalbarhoum@gmail.com',
+  email: 'info@darajatfarms.com',
   address: 'Accra, Greater Accra Region, Ghana',
   founded: 2010,
 }
