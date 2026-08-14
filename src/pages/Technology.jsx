@@ -42,12 +42,12 @@ const TECH_PILLARS = [
 ]
 
 const DASHBOARD_METRICS = [
-  { label: 'Egg Count Today', value: '11,840', unit: 'eggs', up: true },
-  { label: 'Mortality Rate', value: '0.08', unit: '%', up: false },
-  { label: 'Feed Consumed', value: '1.24', unit: 'tonnes', up: false },
-  { label: 'Avg House Temp', value: '22.4', unit: '°C', up: false },
-  { label: 'Water Usage', value: '3,200', unit: 'litres', up: false },
-  { label: 'Live Birds', value: '8,420', unit: 'birds', up: true },
+  { label: 'Egg Count Today',   value: '11,840',  unit: 'eggs',   up: true },
+  { label: 'Mortality Rate',    value: '0.08',    unit: '%',      up: false },
+  { label: 'Feed Consumed',     value: '1.24',    unit: 'tonnes', up: false },
+  { label: 'Avg House Temp',    value: '22.4',    unit: '°C',     up: false },
+  { label: 'Water Usage',       value: '3,200',   unit: 'litres', up: false },
+  { label: 'Live Birds',        value: '8,420',   unit: 'birds',  up: true },
 ]
 
 export default function Technology() {
@@ -72,7 +72,7 @@ export default function Technology() {
                 title="Technology That Separates Us from the Competition"
               />
               <p className="text-farm-dark/65 leading-relaxed mb-4">
-                While most poultry farms in Ghana still operate on manual observation and paper records, Darajat has invested in automation, sensor networks, and digital record-keeping that give us a measurable edge in bird performance, product consistency, and operational efficiency.
+                While most poultry farms in Ghana still operate on manual observation and paper records, FreshFlock has invested in automation, sensor networks, and digital record-keeping that give us a measurable edge in bird performance, product consistency, and operational efficiency.
               </p>
               <p className="text-farm-dark/65 leading-relaxed mb-6">
                 Our tech stack isn't just for show — it directly translates to lower mortality, better feed conversion ratios, and consistent supply for our customers.
@@ -138,9 +138,9 @@ export default function Technology() {
         <div className="container-max">
           <SectionHeader label="Coming Soon" title="What We're Building Next" subtitle="Our R&D pipeline for the next 12 months." />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 reveal">
-            <FeatureCard icon={Wifi} title="IoT Sensor Network" desc="Per-house temperature, humidity, and ammonia sensors feeding into a central control panel." />
+            <FeatureCard icon={Wifi}   title="IoT Sensor Network"  desc="Per-house temperature, humidity, and ammonia sensors feeding into a central control panel." />
             <FeatureCard icon={Shield} title="AI Mortality Alerts" desc="Computer vision cameras detecting signs of illness or distress before they become costly outbreaks." />
-            <FeatureCard icon={Cpu} title="Automated Egg Grading" desc="Machine-vision grading system replacing manual candling for 100% throughput accuracy." />
+            <FeatureCard icon={Cpu}    title="Automated Egg Grading" desc="Machine-vision grading system replacing manual candling for 100% throughput accuracy." />
           </div>
         </div>
       </section>

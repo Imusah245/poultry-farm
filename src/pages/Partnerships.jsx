@@ -156,9 +156,9 @@ export default function Partnerships() {
         <div className="container-max">
           <SectionHeader label="Why Partner With Us" title="What You Can Count On" />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 reveal">
-            <FeatureCard icon={Truck} title="Reliable Weekly Supply" desc="Scheduled deliveries you can plan around. We notify you in advance of any batch delays." />
-            <FeatureCard icon={Check} title="Consistent Quality" desc="Every delivery meets the same grade standard. We reject before we dispatch." />
-            <FeatureCard icon={Building2} title="Flexible Payment Terms" desc="Standard 7-day invoicing for new partners, 30-day terms available for established accounts." />
+            <FeatureCard icon={Truck}     title="Reliable Weekly Supply"    desc="Scheduled deliveries you can plan around. We notify you in advance of any batch delays." />
+            <FeatureCard icon={Check}     title="Consistent Quality"        desc="Every delivery meets the same grade standard. We reject before we dispatch." />
+            <FeatureCard icon={Building2} title="Flexible Payment Terms"    desc="Standard 7-day invoicing for new partners, 30-day terms available for established accounts." />
           </div>
         </div>
       </section>
@@ -172,16 +172,16 @@ export default function Partnerships() {
             <div className="card p-10 text-center reveal">
               <div className="text-5xl mb-4">✅</div>
               <h3 className="font-display text-2xl font-bold text-farm-dark mb-2">Inquiry Received!</h3>
-              <p className="text-farm-dark/60">We'll be in touch within 24 hours. Thank you for your interest in partnering with Darajat Farms.</p>
+              <p className="text-farm-dark/60">We'll be in touch within 24 hours. Thank you for your interest in partnering with FreshFlock.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="card p-8 space-y-5 reveal">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  { id: 'name', label: 'Full Name', type: 'text', placeholder: 'Kofi Mensah' },
+                  { id: 'name',    label: 'Full Name',      type: 'text',  placeholder: 'Kofi Mensah' },
                   { id: 'company', label: 'Company / Business', type: 'text', placeholder: 'Acme Foods Ltd' },
-                  { id: 'email', label: 'Email Address', type: 'email', placeholder: 'kofi@company.com' },
-                  { id: 'phone', label: 'Phone Number', type: 'tel', placeholder: '+233 20 000 0000' },
+                  { id: 'email',   label: 'Email Address',  type: 'email', placeholder: 'kofi@company.com' },
+                  { id: 'phone',   label: 'Phone Number',   type: 'tel',   placeholder: '+233 20 000 0000' },
                 ].map(field => (
                   <div key={field.id}>
                     <label className="block text-sm font-medium text-farm-dark mb-1.5">{field.label}</label>

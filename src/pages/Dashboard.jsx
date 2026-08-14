@@ -32,7 +32,7 @@ const STAT_COLORS = ['green', 'yellow', 'green', 'yellow']
 function StatCard({ stat, icon: Icon, color }) {
   const isUp = stat.trend > 0
   const colorMap = {
-    green: { bg: 'bg-farm-green-pale', text: 'text-farm-green', border: 'border-farm-green/20' },
+    green:  { bg: 'bg-farm-green-pale', text: 'text-farm-green', border: 'border-farm-green/20' },
     yellow: { bg: 'bg-farm-yellow-pale', text: 'text-farm-yellow', border: 'border-farm-yellow/20' },
   }
   const c = colorMap[color]
@@ -91,7 +91,7 @@ export default function Dashboard() {
             <h1 className="font-display text-2xl md:text-3xl font-bold">Farm Operations Centre</h1>
             <p className="text-white/50 text-sm mt-0.5">{now}</p>
           </div>
-          <button className="flex items-center gap-2 btn-secondary-light !border-white/30 text-xs self-start sm:self-auto">
+          <button className="flex items-center gap-2 btn-secondary !border-white/30 !text-white hover:!bg-white/10 text-xs self-start sm:self-auto">
             <RefreshCw size={13} /> Refresh Data
           </button>
         </div>
@@ -124,7 +124,7 @@ export default function Dashboard() {
                 <AreaChart data={EGG_PRODUCTION_DATA} margin={{ top: 5, right: 10, left: 0, bottom: 0 }}>
                   <defs>
                     <linearGradient id="eggGrad" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#2D6A4F" stopOpacity={0.15} />
+                      <stop offset="5%"  stopColor="#2D6A4F" stopOpacity={0.15} />
                       <stop offset="95%" stopColor="#2D6A4F" stopOpacity={0} />
                     </linearGradient>
                   </defs>
@@ -190,7 +190,7 @@ export default function Dashboard() {
                 <BarChart data={FEED_DATA} margin={{ top: 5, right: 10, left: 0, bottom: 0 }}>
                   <defs>
                     <linearGradient id="feedGrad" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#F4A620" stopOpacity={0.9} />
+                      <stop offset="0%"   stopColor="#F4A620" stopOpacity={0.9} />
                       <stop offset="100%" stopColor="#FFD166" stopOpacity={0.7} />
                     </linearGradient>
                   </defs>

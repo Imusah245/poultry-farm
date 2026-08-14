@@ -3,12 +3,12 @@ import { PageHero, SectionHeader, FeatureCard, CTABanner } from '../components/u
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const HOUSING = [
-  { icon: Home, title: 'Layer Houses', desc: '4 dedicated layer houses, 3,000 birds per house. Enriched colony cages with individual feed and water access.' },
-  { icon: Home, title: 'Broiler Houses', desc: '3 broiler houses on deep litter. Capacity: 5,000 birds per batch. Curtain-sided with natural and forced ventilation.' },
-  { icon: Droplets, title: 'Water Systems', desc: 'Nipple drinker lines connected to overhead tanks with UV filtration. Automatic water pressure regulation.' },
-  { icon: Thermometer, title: 'Climate Control', desc: 'Thermostatically controlled tunnel ventilation and evaporative cooling pads for year-round comfort.' },
+  { icon: Home,        title: 'Layer Houses',     desc: '4 dedicated layer houses, 3,000 birds per house. Enriched colony cages with individual feed and water access.' },
+  { icon: Home,        title: 'Broiler Houses',   desc: '3 broiler houses on deep litter. Capacity: 5,000 birds per batch. Curtain-sided with natural and forced ventilation.' },
+  { icon: Droplets,    title: 'Water Systems',    desc: 'Nipple drinker lines connected to overhead tanks with UV filtration. Automatic water pressure regulation.' },
+  { icon: Thermometer, title: 'Climate Control',  desc: 'Thermostatically controlled tunnel ventilation and evaporative cooling pads for year-round comfort.' },
   { icon: ShieldCheck, title: 'Waste Management', desc: 'Litter composted on-site and sold as organic fertiliser. Minimal environmental footprint.' },
-  { icon: MapPin, title: 'Location', desc: 'Situated on 5 acres in a peri-urban zone with good road access. Surrounded by wind-break trees.' },
+  { icon: MapPin,      title: 'Location',         desc: 'Situated on 5 acres in a peri-urban zone with good road access. Surrounded by wind-break trees.' },
 ]
 
 const BIOSECURITY = [
@@ -23,10 +23,10 @@ const BIOSECURITY = [
 ]
 
 const EQUIPMENT = [
-  { name: 'Feed Milling Unit', desc: 'On-site hammer mill for fresh feed mixing.' },
-  { name: 'Egg Grading Machine', desc: 'Automated grading by weight and candling.' },
-  { name: 'Cold Room (2°C)', desc: 'Short-term egg and dressed chicken storage.' },
-  { name: 'Water Filtration System', desc: 'UV + sediment filtration for all bird drinking water.' },
+  { name: 'Feed Milling Unit',         desc: 'On-site hammer mill for fresh feed mixing.' },
+  { name: 'Egg Grading Machine',        desc: 'Automated grading by weight and candling.' },
+  { name: 'Cold Room (2°C)',            desc: 'Short-term egg and dressed chicken storage.' },
+  { name: 'Water Filtration System',   desc: 'UV + sediment filtration for all bird drinking water.' },
   { name: 'Generator Backup (45KVA)', desc: '24/7 power assurance for critical systems.' },
   { name: 'Weighing & Record Station', desc: 'Daily bird weighing and performance tracking.' },
 ]
@@ -51,7 +51,7 @@ export default function OurFarm() {
               <SectionHeader label="Farm Overview" title="Built for Scale, Managed with Care" />
               <div className="space-y-4 text-farm-dark/70 leading-relaxed">
                 <p>
-                  Darajat Farms sits on 5 acres of land on the outskirts of Accra. Established in 2010, the farm has grown from a 500-bird backyard operation to a commercial facility housing over 8,500 birds at peak capacity.
+                  FreshFlock Farms sits on 5 acres of land on the outskirts of Accra. Established in 2010, the farm has grown from a 500-bird backyard operation to a commercial facility housing over 8,500 birds at peak capacity.
                 </p>
                 <p>
                   We operate two production lines: a layer unit for daily egg production and a broiler unit running multiple overlapping 6-week cycles. Both units follow strict all-in all-out management to maintain biosecurity.
@@ -126,7 +126,7 @@ export default function OurFarm() {
                 <Users size={32} className="mb-4 text-farm-yellow" />
                 <h3 className="font-display text-2xl font-bold mb-3">Our Team</h3>
                 <p className="text-white/80 leading-relaxed mb-4">
-                  Darajat Farms employs 12 full-time staff including a resident farm manager with 10+ years experience, two trained stockmen, a qualified vet on retainer, and a dedicated delivery team.
+                  FreshFlock employs 12 full-time staff including a resident farm manager with 10+ years experience, two trained stockmen, a qualified vet on retainer, and a dedicated delivery team.
                 </p>
                 <p className="text-white/80 leading-relaxed">
                   All staff undergo annual food safety and biosecurity training. We believe a well-trained team is the most important piece of equipment on any farm.

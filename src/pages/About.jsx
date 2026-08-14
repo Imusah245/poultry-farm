@@ -15,19 +15,19 @@ const MILESTONES = [
 ]
 
 const VALUES = [
-  { icon: Heart, title: 'Animal Welfare', desc: 'Healthy birds produce better food. We invest in housing, nutrition, and veterinary care above industry minimum standards.' },
-  { icon: Leaf, title: 'Sustainability', desc: 'Litter composted to organic fertiliser, solar supplementing grid power, and water recycling in our wash-down systems.' },
-  { icon: Award, title: 'Uncompromising Quality', desc: 'We reject before we dispatch. Every product meets the same grade standard that built our reputation since 2010.' },
-  { icon: Users, title: 'Community First', desc: 'We employ locally, buy feed locally, and support smallholder farmers through our chick and feed referral programme.' },
-  { icon: Target, title: 'Transparency', desc: 'Our live dashboard is public. We welcome farm visits because we have nothing to hide — and a lot to show.' },
-  { icon: Eye, title: 'Continuous Improvement', desc: 'Every batch teaches us something. Quarterly performance reviews drive incremental gains in FCR, mortality, and quality.' },
+  { icon: Heart,  title: 'Animal Welfare',   desc: 'Healthy birds produce better food. We invest in housing, nutrition, and veterinary care above industry minimum standards.' },
+  { icon: Leaf,   title: 'Sustainability',    desc: 'Litter composted to organic fertiliser, solar supplementing grid power, and water recycling in our wash-down systems.' },
+  { icon: Award,  title: 'Uncompromising Quality', desc: 'We reject before we dispatch. Every product meets the same grade standard that built our reputation since 2010.' },
+  { icon: Users,  title: 'Community First',  desc: 'We employ locally, buy feed locally, and support smallholder farmers through our chick and feed referral programme.' },
+  { icon: Target, title: 'Transparency',     desc: 'Our live dashboard is public. We welcome farm visits because we have nothing to hide — and a lot to show.' },
+  { icon: Eye,    title: 'Continuous Improvement', desc: 'Every batch teaches us something. Quarterly performance reviews drive incremental gains in FCR, mortality, and quality.' },
 ]
 
 const TEAM = [
-  { initials: 'RA', name: 'Abdul Rauf Abubakar', role: 'Founder & Managing Director', bio: 'Agricultural science graduate with 14 years hands-on poultry experience.' },
-  { initials: 'DM', name: 'Darajat Musah', role: 'Farm Manager', bio: '10 years in commercial layer and broiler management. BSc Animal Science.' },
-  { initials: 'EK', name: 'Emmanuel Kumi', role: 'Veterinary Consultant (Retainer)', bio: 'Licensed vet with poultry specialty. Weekly farm health audits.' },
-  { initials: 'AB', name: 'Abena Boateng', role: 'Sales & Partnerships Manager', bio: 'Manages wholesale accounts and new business development.' },
+  { initials: 'KO', name: 'Kwame Owusu',     role: 'Founder & Managing Director',    bio: 'Agricultural science graduate with 14 years hands-on poultry experience.' },
+  { initials: 'AA', name: 'Akosua Acheampong', role: 'Farm Manager',                  bio: '10 years in commercial layer and broiler management. BSc Animal Science.' },
+  { initials: 'EK', name: 'Emmanuel Kumi',   role: 'Veterinary Consultant (Retainer)', bio: 'Licensed vet with poultry specialty. Weekly farm health audits.' },
+  { initials: 'AB', name: 'Abena Boateng',   role: 'Sales & Partnerships Manager',   bio: 'Manages wholesale accounts and new business development.' },
 ]
 
 export default function About() {
@@ -38,7 +38,7 @@ export default function About() {
       <PageHero
         badge="About Us"
         title="A Farm Built on Integrity"
-        subtitle="From 500 backyard layers to 8,500+ birds and 200 wholesale clients — the Darajat Farms story is one of slow, deliberate, quality-first growth."
+        subtitle="From 500 backyard layers to 8,500+ birds and 200 wholesale clients — the FreshFlock story is one of slow, deliberate, quality-first growth."
       />
 
       {/* Origin Story */}
@@ -46,16 +46,16 @@ export default function About() {
         <div className="container-max">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="reveal">
-              <SectionHeader label="Our Story" title="How Darajat Farms Began" />
+              <SectionHeader label="Our Story" title="How FreshFlock Began" />
               <div className="space-y-4 text-farm-dark/70 leading-relaxed">
                 <p>
-                  Darajat Farms was founded in 2010 by Abdul Rauf Abubakar, an agricultural science graduate who believed that Ghana's urban food chain deserved a better class of egg. Starting with 500 Lohmann Brown pullets in a self-built wooden shed on his family's land, Abdul Rauf sold to neighbours and a handful of local restaurants.
+                  FreshFlock Farms was founded in 2010 by Kwame Owusu, an agricultural science graduate who believed that Ghana's urban food chain deserved a better class of egg. Starting with 500 Lohmann Brown pullets in a self-built wooden shed on his family's land, Kwame sold to neighbours and a handful of local restaurants.
                 </p>
                 <p>
                   The philosophy was simple: never cut corners on feed, biosecurity, or bird welfare. That philosophy — stubbornly maintained through difficult commodity price cycles and disease pressures — built a reputation that marketing money couldn't buy.
                 </p>
                 <p>
-                  Today Darajat Farms operates 7 production houses, employs 12 full-time staff, and delivers to over 200 wholesale clients across Accra and beyond. The feed-first, quality-first ethos hasn't changed since day one.
+                  Today FreshFlock operates 7 production houses, employs 12 full-time staff, and delivers to over 200 wholesale clients across Accra and beyond. The feed-first, quality-first ethos hasn't changed since day one.
                 </p>
               </div>
             </div>
@@ -92,7 +92,7 @@ export default function About() {
               <Eye size={32} className="mb-4 text-farm-yellow" />
               <h3 className="font-display text-2xl font-bold text-farm-dark mb-3">Our Vision</h3>
               <p className="text-farm-dark/70 leading-relaxed">
-                A future where every family in Ghana has consistent access to affordable, high-quality protein from a local farm they can trust — and where Darajat Farms is synonymous with that trust across West Africa.
+                A future where every family in Ghana has consistent access to affordable, high-quality protein from a local farm they can trust — and where FreshFlock is synonymous with that trust across West Africa.
               </p>
             </div>
           </div>

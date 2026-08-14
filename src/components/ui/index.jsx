@@ -51,9 +51,9 @@ export function SectionHeader({ label, title, subtitle, center = false }) {
 export function StatCard({ icon, value, label, suffix = '', color = 'green' }) {
   const Icon = icon
   const colors = {
-    green: 'bg-farm-green-pale text-farm-green',
+    green:  'bg-farm-green-pale text-farm-green',
     yellow: 'bg-farm-yellow-pale text-farm-yellow',
-    earth: 'bg-amber-50 text-amber-700',
+    earth:  'bg-amber-50 text-amber-700',
   }
   return (
     <div className="stat-card group hover:-translate-y-1 transition-transform duration-300">
@@ -151,7 +151,7 @@ export function CTABanner({ title, subtitle, primaryLabel, primaryTo, secondaryL
           <div className="flex flex-wrap gap-4 justify-center relative z-10">
             <a href={primaryTo} className="btn-yellow">{primaryLabel}</a>
             {secondaryLabel && (
-              <a href={secondaryTo} className="btn-secondary-light">{secondaryLabel}</a>
+              <a href={secondaryTo} className="btn-secondary !border-white !text-white hover:!bg-white/10">{secondaryLabel}</a>
             )}
           </div>
         </div>

@@ -9,36 +9,36 @@ const CONTACT_ITEMS = [
     icon: Phone,
     label: 'Call Us',
     value: COMPANY.phone,
-    href: `tel:${COMPANY.phone.replace(/\s/g, '')}`,
-    note: 'Mon–Sun, 7am – 6pm',
+    href:  `tel:${COMPANY.phone.replace(/\s/g, '')}`,
+    note:  'Mon–Sat, 7am – 6pm',
   },
   {
     icon: MessageCircle,
     label: 'WhatsApp',
     value: COMPANY.phone,
-    href: `https://wa.me/233552866857`,
-    note: 'Fastest response',
+    href:  `https://wa.me/233200000000`,
+    note:  'Fastest response',
   },
   {
     icon: Mail,
     label: 'Email',
     value: COMPANY.email,
-    href: `mailto:${COMPANY.email}`,
-    note: 'Reply within 24 hours',
+    href:  `mailto:${COMPANY.email}`,
+    note:  'Reply within 24 hours',
   },
   {
     icon: MapPin,
     label: 'Location',
     value: COMPANY.address,
-    href: 'https://maps.google.com/?q=Accra,Ghana',
-    note: 'Farm visits by appointment',
+    href:  'https://maps.google.com/?q=Accra,Ghana',
+    note:  'Farm visits by appointment',
   },
 ]
 
 const HOURS = [
   { day: 'Monday – Friday', hours: '7:00 AM – 6:00 PM' },
-  { day: 'Saturday', hours: '7:00 AM – 6:00 PM' },
-  { day: 'Sunday', hours: '7:00 AM – 6:00 PM' },
+  { day: 'Saturday',        hours: '7:00 AM – 2:00 PM' },
+  { day: 'Sunday',          hours: 'Closed (Emergency orders: call us)' },
 ]
 
 export default function Contact() {
@@ -110,7 +110,7 @@ export default function Contact() {
               {/* Map embed */}
               <div className="card overflow-hidden h-56 reveal">
                 <iframe
-                  title="Darajat Farms Location"
+                  title="FreshFlock Farms Location"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254682.35084014027!2d-0.3536258!3d5.5912702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9084b2ad7a4d%3A0xbed14f2d4c9c9955!2sAccra%2C%20Ghana!5e0!3m2!1sen!2s!4v1713000000000!5m2!1sen!2s"
                   width="100%"
                   height="100%"
@@ -132,7 +132,7 @@ export default function Contact() {
                     Thank you for reaching out. Our team will get back to you within 24 hours.
                   </p>
                   <button
-                    onClick={() => { setSent(false); setForm({ name: '', email: '', phone: '', subject: '', message: '' }) }}
+                    onClick={() => { setSent(false); setForm({ name:'', email:'', phone:'', subject:'', message:'' }) }}
                     className="btn-secondary mt-6"
                   >
                     Send Another Message
@@ -152,7 +152,7 @@ export default function Contact() {
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-farm-dark mb-1.5">Phone Number</label>
-                        <input type="tel" placeholder="+233240000000" value={form.phone} onChange={update('phone')}
+                        <input type="tel" placeholder="+233 20 000 0000" value={form.phone} onChange={update('phone')}
                           className="w-full px-4 py-2.5 rounded-xl border border-farm-green-pale text-sm focus:outline-none focus:ring-2 focus:ring-farm-green/30 focus:border-farm-green transition" />
                       </div>
                     </div>

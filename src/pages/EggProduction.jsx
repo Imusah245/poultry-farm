@@ -3,10 +3,10 @@ import { PageHero, SectionHeader, ProcessFlow, FeatureCard, CTABanner } from '..
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const PROCESS = [
-  { icon: Egg, title: 'Feeding', desc: 'Balanced layer mash with calcium for strong shells and rich yolks.' },
-  { icon: Egg, title: 'Laying', desc: 'Hens lay in clean, comfortable nest boxes twice daily.' },
-  { icon: Package, title: 'Collection', desc: 'Eggs collected 2× daily, inspected and candled for quality.' },
-  { icon: ShieldCheck, title: 'Packaging', desc: 'Graded by size and weight, packed in food-safe trays or cartons.' },
+  { icon: Egg,         title: 'Feeding',    desc: 'Balanced layer mash with calcium for strong shells and rich yolks.' },
+  { icon: Egg,         title: 'Laying',     desc: 'Hens lay in clean, comfortable nest boxes twice daily.' },
+  { icon: Package,     title: 'Collection', desc: 'Eggs collected 2× daily, inspected and candled for quality.' },
+  { icon: ShieldCheck, title: 'Packaging',  desc: 'Graded by size and weight, packed in food-safe trays or cartons.' },
 ]
 
 const EGG_TYPES = [
@@ -34,12 +34,12 @@ const EGG_TYPES = [
 ]
 
 const QA_FEATURES = [
-  { icon: ShieldCheck, title: 'Clean Environment', desc: 'Houses cleaned and disinfected between each batch. Daily litter management prevents ammonia build-up.' },
-  { icon: Egg, title: 'Optimal Nutrition', desc: 'Layer feed formulated by certified nutritionist. Fresh water available 24/7 via automated nipple drinkers.' },
-  { icon: Thermometer, title: 'Controlled Storage', desc: 'Eggs stored at 18°C and 75% RH to maintain freshness. Never refrigerated during transit — unless requested.' },
-  { icon: Droplets, title: 'Candling & Grading', desc: 'Every egg individually candled to detect cracks or abnormalities before packing.' },
-  { icon: Award, title: 'Graded by Size', desc: 'Consistent size grading ensures your customers always get what they expect.' },
-  { icon: Package, title: 'Safe Packaging', desc: 'Food-safe pulp trays and cartons clearly labelled with production and best-before dates.' },
+  { icon: ShieldCheck,  title: 'Clean Environment',   desc: 'Houses cleaned and disinfected between each batch. Daily litter management prevents ammonia build-up.' },
+  { icon: Egg,          title: 'Optimal Nutrition',    desc: 'Layer feed formulated by certified nutritionist. Fresh water available 24/7 via automated nipple drinkers.' },
+  { icon: Thermometer,  title: 'Controlled Storage',   desc: 'Eggs stored at 18°C and 75% RH to maintain freshness. Never refrigerated during transit — unless requested.' },
+  { icon: Droplets,     title: 'Candling & Grading',   desc: 'Every egg individually candled to detect cracks or abnormalities before packing.' },
+  { icon: Award,        title: 'Graded by Size',       desc: 'Consistent size grading ensures your customers always get what they expect.' },
+  { icon: Package,      title: 'Safe Packaging',       desc: 'Food-safe pulp trays and cartons clearly labelled with production and best-before dates.' },
 ]
 
 export default function EggProduction() {
@@ -99,7 +99,7 @@ export default function EggProduction() {
       {/* Quality Assurance */}
       <section className="section">
         <div className="container-max">
-          <SectionHeader label="Quality Assurance" title="Why Our Eggs Are Different" subtitle="Six pillars of quality that make every Darajat egg exceptional." />
+          <SectionHeader label="Quality Assurance" title="Why Our Eggs Are Different" subtitle="Six pillars of quality that make every FreshFlock egg exceptional." />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 reveal">
             {QA_FEATURES.map((f, i) => <FeatureCard key={i} {...f} />)}
           </div>

@@ -3,27 +3,27 @@ import { NavLink, Link } from 'react-router-dom'
 import { Menu, X, Egg, ChevronDown } from 'lucide-react'
 
 const NAV_LINKS = [
-  { label: 'Home', to: '/' },
-  { label: 'About', to: '/about' },
+  { label: 'Home',         to: '/' },
+  { label: 'About',        to: '/about' },
   {
     label: 'Products',
     children: [
-      { label: '🥚 Egg Production', to: '/eggs' },
+      { label: '🥚 Egg Production',    to: '/eggs' },
       { label: '🍗 Broiler Production', to: '/broilers' },
     ],
   },
-  { label: 'Our Farm', to: '/farm' },
-  { label: 'Technology', to: '/technology' },
-  { label: 'Dashboard', to: '/dashboard' },
-  { label: 'Blog', to: '/blog' },
+  { label: 'Our Farm',     to: '/farm' },
+  { label: 'Technology',   to: '/technology' },
+  { label: 'Dashboard',    to: '/dashboard' },
+  { label: 'Blog',         to: '/blog' },
   { label: 'Partnerships', to: '/partnerships' },
-  { label: 'Contact', to: '/contact' },
+  { label: 'Contact',      to: '/contact' },
 ]
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const [dropdown, setDropdown] = useState(false)
+  const [open,      setOpen]      = useState(false)
+  const [scrolled,  setScrolled]  = useState(false)
+  const [dropdown,  setDropdown]  = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -49,7 +49,7 @@ export default function Navbar() {
           <div>
             <span className={`font-display font-bold text-lg leading-none block transition-colors
               ${scrolled ? 'text-farm-dark' : 'text-white'}`}>
-              Darajat
+              FreshFlock
             </span>
             <span className={`text-[10px] font-semibold tracking-widest uppercase leading-none transition-colors
               ${scrolled ? 'text-farm-yellow' : 'text-farm-yellow-light'}`}>
@@ -57,6 +57,7 @@ export default function Navbar() {
             </span>
           </div>
         </Link>
+
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-6">
           {NAV_LINKS.map((link) =>

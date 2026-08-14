@@ -10,17 +10,17 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 import { STATS, TESTIMONIALS } from '../data'
 
 const PROCESS = [
-  { icon: Egg, title: 'Hatchery', desc: 'Quality day-old chicks from certified breeders.' },
-  { icon: Wheat, title: 'Rearing', desc: 'Optimal nutrition and climate-controlled housing.' },
-  { icon: ShieldCheck, title: 'Production', desc: 'Biosecure layer and broiler production at scale.' },
-  { icon: Truck, title: 'Distribution', desc: 'Cold-chain delivery direct to your door.' },
+  { icon: Egg,        title: 'Hatchery',     desc: 'Quality day-old chicks from certified breeders.' },
+  { icon: Wheat,      title: 'Rearing',      desc: 'Optimal nutrition and climate-controlled housing.' },
+  { icon: ShieldCheck,title: 'Production',   desc: 'Biosecure layer and broiler production at scale.' },
+  { icon: Truck,      title: 'Distribution', desc: 'Cold-chain delivery direct to your door.' },
 ]
 
 const WHY_US = [
-  { icon: ShieldCheck, title: 'Strict Biosecurity', desc: 'All-in all-out systems, footbaths, and regular vet inspections keep disease risk minimal.' },
-  { icon: Wheat, title: 'Premium Quality Feed', desc: 'Balanced rations formulated by nutritionists ensure healthy birds and superior produce.' },
-  { icon: Users, title: 'Experienced Team', desc: '14+ years of hands-on expertise in commercial layer and broiler management.' },
-  { icon: Star, title: 'Certified Quality', desc: 'HACCP-compliant handling and packaging from farm to delivery.' },
+  { icon: ShieldCheck, title: 'Strict Biosecurity',   desc: 'All-in all-out systems, footbaths, and regular vet inspections keep disease risk minimal.' },
+  { icon: Wheat,       title: 'Premium Quality Feed',  desc: 'Balanced rations formulated by nutritionists ensure healthy birds and superior produce.' },
+  { icon: Users,       title: 'Experienced Team',      desc: '14+ years of hands-on expertise in commercial layer and broiler management.' },
+  { icon: Star,        title: 'Certified Quality',     desc: 'HACCP-compliant handling and packaging from farm to delivery.' },
 ]
 
 export default function Home() {
@@ -57,7 +57,7 @@ export default function Home() {
               <Link to="/contact" className="btn-yellow text-base px-8 py-4">
                 Order Now <ArrowRight size={16} />
               </Link>
-              <Link to="/about" className="btn-secondary border border-white text-white bg-transparent hover:bg-white/10 text-base px-8 py-4">
+              <Link to="/about" className="btn-secondary !border-white !text-white hover:!bg-white/10 text-base px-8 py-4">
                 Our Story
               </Link>
             </div>
@@ -91,10 +91,10 @@ export default function Home() {
             center
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
-            <ProductCard emoji="🥚" title="Table Eggs" badge="Daily Harvest" desc="Fresh-laid eggs from healthy, well-fed layers — collected and graded daily." to="/eggs" />
-            <ProductCard emoji="🍳" title="Omega-3 Eggs" badge="Premium" desc="Enriched eggs from specially-fed hens for superior nutritional profile." to="/eggs" />
-            <ProductCard emoji="🍗" title="Live Broilers" badge="Weekly Batch" desc="Fast-growing birds raised on balanced feed for superior meat yield." to="/broilers" />
-            <ProductCard emoji="🥩" title="Dressed Chicken" badge="Ready to Cook" desc="Hygienically processed and packaged whole birds and portions." to="/broilers" />
+            <ProductCard emoji="🥚" title="Table Eggs"    badge="Daily Harvest" desc="Fresh-laid eggs from healthy, well-fed layers — collected and graded daily." to="/eggs" />
+            <ProductCard emoji="🍳" title="Omega-3 Eggs"  badge="Premium"        desc="Enriched eggs from specially-fed hens for superior nutritional profile."   to="/eggs" />
+            <ProductCard emoji="🍗" title="Live Broilers" badge="Weekly Batch"   desc="Fast-growing birds raised on balanced feed for superior meat yield."        to="/broilers" />
+            <ProductCard emoji="🥩" title="Dressed Chicken" badge="Ready to Cook" desc="Hygienically processed and packaged whole birds and portions."             to="/broilers" />
           </div>
         </div>
       </section>
@@ -120,7 +120,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="reveal">
               <SectionHeader
-                label="Why Darajat Farms"
+                label="Why FreshFlock"
                 title="Quality You Can See, Taste & Trust"
                 subtitle="We don't just raise birds — we build systems that guarantee consistency, safety, and freshness batch after batch."
               />
