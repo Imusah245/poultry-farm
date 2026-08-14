@@ -1,0 +1,10 @@
+# Test output files (debugging artifacts)
+test-auth-output.txt
+test-output.txt
+test-result.txt
+test-seed-output.txt
+verify-output.txt
+check.txt
+validate-check.js
+verify-server.js
+test-models.js
