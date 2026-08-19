@@ -1,31 +1,10 @@
 import { Clock, Tag, ArrowRight, Search } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { PageHero, SectionHeader, CTABanner } from '../components/ui'
 import { useScrollReveal } from '../hooks/useScrollReveal'
-import { BLOG_POSTS } from '../data'
+import { fetchAPI } from '../api'
 
 const CATEGORIES = ['All', 'Egg Tips', 'Broiler Care', 'Health', 'Technology', 'Business']
-
-const EXTRA_POSTS = [
-  {
-    id: 5,
-    title:    'Understanding Feed Conversion Ratio (FCR) in Broilers',
-    excerpt:  'What FCR means, how to measure it on your farm, and practical steps to push it below 1.85.',
-    category: 'Broiler Care',
-    date:     'January 5, 2025',
-    readTime: '8 min',
-  },
-  {
-    id: 6,
-    title:    'How to Price Your Eggs for Profit in Ghana',
-    excerpt:  'A practical guide to cost-plus pricing, market benchmarking, and setting wholesale vs retail rates.',
-    category: 'Business',
-    date:     'December 14, 2024',
-    readTime: '6 min',
-  },
-]
-
-const ALL_POSTS = [...BLOG_POSTS, ...EXTRA_POSTS]
 
 const CATEGORY_COLORS = {
   'Egg Tips':    'bg-farm-yellow-pale text-amber-700',
@@ -38,9 +17,27 @@ const CATEGORY_COLORS = {
 export default function Blog() {
   const [activeCategory, setActiveCategory] = useState('All')
   const [query, setQuery] = useState('')
+  const [posts, setPosts] = useState([])
+  const [loading, setLoading] = useState(true)
   const ref = useScrollReveal()
 
-  const filtered = ALL_POSTS.filter(p => {
+  useEffect(() => {
+    fetchAPI('/blog')
+      .then(data => {
+        setPosts(data.map((p, i) => ({
+          id: p._id,
+          title: p.title,
+          excerpt: p.excerpt,
+          category: p.category,
+          date: new Date(p.createdAt).toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' }),
+          readTime: p.readTime || '5 min',
+        })))
+      })
+      .catch(console.error)
+      .finally(() => setLoading(false))
+  }, [])
+
+  const filtered = posts.filter(p => {
     const matchCat = activeCategory === 'All' || p.category === activeCategory
     const matchQ   = query === '' || p.title.toLowerCase().includes(query.toLowerCase())
     return matchCat && matchQ
@@ -77,7 +74,7 @@ export default function Blog() {
                   className={`px-4 py-2 rounded-full text-xs font-semibold border transition-all
                     ${activeCategory === cat
                       ? 'bg-farm-green text-white border-farm-green'
-                      : 'bg-white text-farm-dark/60 border-farm-green-pale hover:border-farm-green hover:text-farm-green'
+                      : 'bg-farm-green-pale/50 text-farm-dark/70 border-farm-green-pale hover:bg-farm-green-pale hover:border-farm-green hover:text-farm-green'
                     }`}
                 >
                   {cat}
@@ -86,8 +83,15 @@ export default function Blog() {
             </div>
           </div>
 
+          {/* Loading state */}
+          {loading && (
+            <div className="text-center py-16 text-farm-dark/40">
+              <p className="font-semibold">Loading articles...</p>
+            </div>
+          )}
+
           {/* Featured post */}
-          {filtered.length > 0 && activeCategory === 'All' && query === '' && (
+          {!loading && filtered.length > 0 && activeCategory === 'All' && query === '' && (
             <div className="card p-0 overflow-hidden mb-8 reveal group cursor-pointer hover:-translate-y-1 transition-transform duration-300">
               <div className="grid md:grid-cols-2">
                 <div className="h-56 md:h-auto bg-gradient-to-br from-farm-green to-farm-green-light flex items-center justify-center text-8xl">
@@ -119,30 +123,32 @@ export default function Blog() {
           )}
 
           {/* Post grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
-            {(activeCategory === 'All' && query === '' ? filtered.slice(1) : filtered).map(post => (
-              <article key={post.id} className="card p-0 overflow-hidden group cursor-pointer hover:-translate-y-1 transition-transform duration-300">
-                <div className="h-36 bg-gradient-to-br from-farm-green-pale to-farm-yellow-pale flex items-center justify-center text-5xl">
-                  {post.category === 'Egg Tips' ? '🥚' : post.category === 'Broiler Care' ? '🍗' : post.category === 'Health' ? '💊' : post.category === 'Technology' ? '⚙️' : '📊'}
-                </div>
-                <div className="p-5">
-                  <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${CATEGORY_COLORS[post.category] || 'bg-gray-100 text-gray-600'}`}>
-                    {post.category}
-                  </span>
-                  <h3 className="font-display font-bold text-base text-farm-dark mt-3 mb-2 group-hover:text-farm-green transition-colors leading-snug">
-                    {post.title}
-                  </h3>
-                  <p className="text-farm-dark/55 text-sm leading-relaxed mb-4 line-clamp-2">{post.excerpt}</p>
-                  <div className="flex items-center justify-between text-farm-dark/40 text-xs pt-3 border-t border-farm-green-pale/50">
-                    <span>{post.date}</span>
-                    <span className="flex items-center gap-1"><Clock size={11} /> {post.readTime}</span>
+          {!loading && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+              {(activeCategory === 'All' && query === '' ? filtered.slice(1) : filtered).map(post => (
+                <article key={post.id} className="card p-0 overflow-hidden group cursor-pointer hover:-translate-y-1 transition-transform duration-300">
+                  <div className="h-36 bg-gradient-to-br from-farm-green-pale to-farm-yellow-pale flex items-center justify-center text-5xl">
+                    {post.category === 'Egg Tips' ? '🥚' : post.category === 'Broiler Care' ? '🍗' : post.category === 'Health' ? '💊' : post.category === 'Technology' ? '⚙️' : '📊'}
                   </div>
-                </div>
-              </article>
-            ))}
-          </div>
+                  <div className="p-5">
+                    <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${CATEGORY_COLORS[post.category] || 'bg-gray-100 text-gray-600'}`}>
+                      {post.category}
+                    </span>
+                    <h3 className="font-display font-bold text-base text-farm-dark mt-3 mb-2 group-hover:text-farm-green transition-colors leading-snug">
+                      {post.title}
+                    </h3>
+                    <p className="text-farm-dark/55 text-sm leading-relaxed mb-4 line-clamp-2">{post.excerpt}</p>
+                    <div className="flex items-center justify-between text-farm-dark/40 text-xs pt-3 border-t border-farm-green-pale/50">
+                      <span>{post.date}</span>
+                      <span className="flex items-center gap-1"><Clock size={11} /> {post.readTime}</span>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
 
-          {filtered.length === 0 && (
+          {!loading && filtered.length === 0 && (
             <div className="text-center py-16 text-farm-dark/40">
               <p className="text-4xl mb-3">🔍</p>
               <p className="font-semibold">No articles found for your search.</p>

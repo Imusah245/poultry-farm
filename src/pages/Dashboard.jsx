@@ -1,3 +1,5 @@
+// TODO: Wire to backend API once login UI is implemented
+// Endpoints: GET /api/dashboard/stats, GET /api/eggs, GET /api/broilers (all require auth)
 import { TrendingUp, TrendingDown, Egg, Users, ShoppingCart, Wheat, AlertCircle, RefreshCw } from 'lucide-react'
 import {
   AreaChart, Area, BarChart, Bar, LineChart, Line,
@@ -91,7 +93,7 @@ export default function Dashboard() {
             <h1 className="font-display text-2xl md:text-3xl font-bold">Farm Operations Centre</h1>
             <p className="text-white/50 text-sm mt-0.5">{now}</p>
           </div>
-          <button className="flex items-center gap-2 btn-secondary !border-white/30 !text-white hover:!bg-white/10 text-xs self-start sm:self-auto">
+          <button className="flex items-center gap-2 btn-secondary !border-white/40 !text-white !bg-white/10 hover:!bg-white/20 text-xs self-start sm:self-auto">
             <RefreshCw size={13} /> Refresh Data
           </button>
         </div>

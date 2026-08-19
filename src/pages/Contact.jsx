@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Phone, Mail, MapPin, Clock, Send, MessageCircle, CheckCircle } from 'lucide-react'
 import { PageHero, SectionHeader } from '../components/ui'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import { postAPI } from '../api'
 import { COMPANY } from '../data'
 
 const CONTACT_ITEMS = [
@@ -35,6 +36,14 @@ const CONTACT_ITEMS = [
   },
 ]
 
+function isValidGhanaPhone(phone) {
+  if (!phone || phone.trim() === '') return true
+  const stripped = phone.replace(/[\s\-()]/g, '')
+  if (/^\+233[1-9]\d{8}$/.test(stripped)) return true
+  if (/^0[1-9]\d{8}$/.test(stripped)) return true
+  return false
+}
+
 const HOURS = [
   { day: 'Monday – Friday', hours: '7:00 AM – 6:00 PM' },
   { day: 'Saturday',        hours: '7:00 AM – 2:00 PM' },
@@ -44,11 +53,34 @@ const HOURS = [
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '' })
   const [sent, setSent] = useState(false)
+  const [error, setError] = useState('')
+  const [phoneError, setPhoneError] = useState('')
+  const [submitting, setSubmitting] = useState(false)
   const ref = useScrollReveal()
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setSent(true)
+    setSubmitting(true)
+    setError('')
+    if (form.phone && !isValidGhanaPhone(form.phone)) {
+      setPhoneError('Please enter a valid Ghanaian number (+233 XX XXX XXXX or 0XX XXX XXXX)')
+      setSubmitting(false)
+      return
+    }
+    setPhoneError('')
+    try {
+      await postAPI('/contact', {
+        name: form.name,
+        email: form.email,
+        subject: form.subject,
+        message: form.message,
+      })
+      setSent(true)
+    } catch (err) {
+      setError(err.message || 'Failed to send message. Please try again.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const update = (field) => (e) => setForm(f => ({ ...f, [field]: e.target.value }))
@@ -110,7 +142,7 @@ export default function Contact() {
               {/* Map embed */}
               <div className="card overflow-hidden h-56 reveal">
                 <iframe
-                  title="FreshFlock Farms Location"
+                  title="DarajatFarms Location"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254682.35084014027!2d-0.3536258!3d5.5912702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9084b2ad7a4d%3A0xbed14f2d4c9c9955!2sAccra%2C%20Ghana!5e0!3m2!1sen!2s!4v1713000000000!5m2!1sen!2s"
                   width="100%"
                   height="100%"
@@ -152,8 +184,9 @@ export default function Contact() {
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-farm-dark mb-1.5">Phone Number</label>
-                        <input type="tel" placeholder="+233 20 000 0000" value={form.phone} onChange={update('phone')}
+                        <input type="tel" placeholder="+233 20 000 0000" value={form.phone} onChange={e => { update('phone')(e); setPhoneError('') }}
                           className="w-full px-4 py-2.5 rounded-xl border border-farm-green-pale text-sm focus:outline-none focus:ring-2 focus:ring-farm-green/30 focus:border-farm-green transition" />
+                        {phoneError && <p className="text-amber-600 text-xs mt-1">{phoneError}</p>}
                       </div>
                     </div>
 
@@ -180,9 +213,10 @@ export default function Contact() {
                         className="w-full px-4 py-2.5 rounded-xl border border-farm-green-pale text-sm focus:outline-none focus:ring-2 focus:ring-farm-green/30 focus:border-farm-green transition resize-none" />
                     </div>
 
-                    <button type="submit" className="btn-primary w-full justify-center">
-                      <Send size={15} /> Send Message
+                    <button type="submit" disabled={submitting} className="btn-primary w-full justify-center disabled:opacity-50">
+                      {submitting ? 'Sending...' : <><Send size={15} /> Send Message</>}
                     </button>
+                    {error && <p className="text-red-500 text-sm">{error}</p>}
                   </form>
                 </div>
               )}

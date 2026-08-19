@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import {
   ArrowRight, ShieldCheck, Wheat, Users, Truck,
@@ -7,7 +8,8 @@ import {
   SectionHeader, StatCard, ProcessFlow, TestimonialCard, CTABanner, ProductCard, FeatureCard,
 } from '../components/ui'
 import { useScrollReveal } from '../hooks/useScrollReveal'
-import { STATS, TESTIMONIALS } from '../data'
+import { fetchAPI } from '../api'
+import { STATS } from '../data'
 
 const PROCESS = [
   { icon: Egg,        title: 'Hatchery',     desc: 'Quality day-old chicks from certified breeders.' },
@@ -25,6 +27,11 @@ const WHY_US = [
 
 export default function Home() {
   const ref = useScrollReveal()
+  const [testimonials, setTestimonials] = useState([])
+
+  useEffect(() => {
+    fetchAPI('/testimonials').then(setTestimonials).catch(console.error)
+  }, [])
 
   return (
     <div ref={ref}>
@@ -57,7 +64,7 @@ export default function Home() {
               <Link to="/contact" className="btn-yellow text-base px-8 py-4">
                 Order Now <ArrowRight size={16} />
               </Link>
-              <Link to="/about" className="btn-secondary !border-white !text-white hover:!bg-white/10 text-base px-8 py-4">
+              <Link to="/about" className="btn-secondary !border-white/60 !text-white !bg-white/10 hover:!bg-white/20 text-base px-8 py-4">
                 Our Story
               </Link>
             </div>
@@ -142,7 +149,7 @@ export default function Home() {
         <div className="container-max">
           <SectionHeader label="What Clients Say" title="Trusted by Restaurants, Hotels & Retailers" center />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
-            {TESTIMONIALS.map((t, i) => (
+            {testimonials.map((t, i) => (
               <TestimonialCard key={i} {...t} />
             ))}
           </div>
