@@ -51,7 +51,7 @@ export default function OurFarm() {
               <SectionHeader label="Farm Overview" title="Built for Scale, Managed with Care" />
               <div className="space-y-4 text-farm-dark/70 leading-relaxed">
                 <p>
-                  FreshFlock Farms sits on 5 acres of land on the outskirts of Accra. Established in 2010, the farm has grown from a 500-bird backyard operation to a commercial facility housing over 8,500 birds at peak capacity.
+                  DarajatFarms sits on 5 acres of land on the outskirts of Accra. Established in 2010, the farm has grown from a 500-bird backyard operation to a commercial facility housing over 8,500 birds at peak capacity.
                 </p>
                 <p>
                   We operate two production lines: a layer unit for daily egg production and a broiler unit running multiple overlapping 6-week cycles. Both units follow strict all-in all-out management to maintain biosecurity.
@@ -126,7 +126,7 @@ export default function OurFarm() {
                 <Users size={32} className="mb-4 text-farm-yellow" />
                 <h3 className="font-display text-2xl font-bold mb-3">Our Team</h3>
                 <p className="text-white/80 leading-relaxed mb-4">
-                  FreshFlock employs 12 full-time staff including a resident farm manager with 10+ years experience, two trained stockmen, a qualified vet on retainer, and a dedicated delivery team.
+                  DarajatFarms employs 12 full-time staff including a resident farm manager with 10+ years experience, two trained stockmen, a qualified vet on retainer, and a dedicated delivery team.
                 </p>
                 <p className="text-white/80 leading-relaxed">
                   All staff undergo annual food safety and biosecurity training. We believe a well-trained team is the most important piece of equipment on any farm.

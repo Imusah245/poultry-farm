@@ -49,7 +49,7 @@ export default function Navbar() {
           <div>
             <span className={`font-display font-bold text-lg leading-none block transition-colors
               ${scrolled ? 'text-farm-dark' : 'text-white'}`}>
-              FreshFlock
+              Darajat
             </span>
             <span className={`text-[10px] font-semibold tracking-widest uppercase leading-none transition-colors
               ${scrolled ? 'text-farm-yellow' : 'text-farm-yellow-light'}`}>

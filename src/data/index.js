@@ -1,10 +1,10 @@
 // ── Site Data ────────────────────────────────────────────────────────────────
 
 export const COMPANY = {
-  name:    'FreshFlock Farms',
+  name:    'DarajatFarms',
   tagline: 'Fresh Eggs & Quality Broilers You Can Trust',
   phone:   '+233 20 000 0000',
-  email:   'info@freshflockfarms.com',
+  email:   'barhoumtech@gmail.com',
   address: 'Accra, Greater Accra Region, Ghana',
   founded: 2010,
 }
@@ -18,7 +18,7 @@ export const STATS = [
 
 export const TESTIMONIALS = [
   {
-    quote:   'FreshFlock has been our trusted egg supplier for 3 years. Consistent quality and always on time.',
+    quote:   'DarajatFarms has been our trusted egg supplier for 3 years. Consistent quality and always on time.',
     author:  'Kofi Mensah',
     role:    'Restaurant Owner, Accra',
     initials:'KM',

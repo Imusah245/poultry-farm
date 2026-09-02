@@ -72,7 +72,7 @@ export default function Technology() {
                 title="Technology That Separates Us from the Competition"
               />
               <p className="text-farm-dark/65 leading-relaxed mb-4">
-                While most poultry farms in Ghana still operate on manual observation and paper records, FreshFlock has invested in automation, sensor networks, and digital record-keeping that give us a measurable edge in bird performance, product consistency, and operational efficiency.
+                While most poultry farms in Ghana still operate on manual observation and paper records, DarajatFarms has invested in automation, sensor networks, and digital record-keeping that give us a measurable edge in bird performance, product consistency, and operational efficiency.
               </p>
               <p className="text-farm-dark/65 leading-relaxed mb-6">
                 Our tech stack isn't just for show — it directly translates to lower mortality, better feed conversion ratios, and consistent supply for our customers.

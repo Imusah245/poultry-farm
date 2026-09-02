@@ -38,7 +38,7 @@ export default function About() {
       <PageHero
         badge="About Us"
         title="A Farm Built on Integrity"
-        subtitle="From 500 backyard layers to 8,500+ birds and 200 wholesale clients — the FreshFlock story is one of slow, deliberate, quality-first growth."
+        subtitle="From 500 backyard layers to 8,500+ birds and 200 wholesale clients — the DarajatFarms story is one of slow, deliberate, quality-first growth."
       />
 
       {/* Origin Story */}
@@ -46,16 +46,16 @@ export default function About() {
         <div className="container-max">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="reveal">
-              <SectionHeader label="Our Story" title="How FreshFlock Began" />
+              <SectionHeader label="Our Story" title="How DarajatFarms Began" />
               <div className="space-y-4 text-farm-dark/70 leading-relaxed">
                 <p>
-                  FreshFlock Farms was founded in 2010 by Kwame Owusu, an agricultural science graduate who believed that Ghana's urban food chain deserved a better class of egg. Starting with 500 Lohmann Brown pullets in a self-built wooden shed on his family's land, Kwame sold to neighbours and a handful of local restaurants.
+                  DarajatFarms was founded in 2010 by Kwame Owusu, an agricultural science graduate who believed that Ghana's urban food chain deserved a better class of egg. Starting with 500 Lohmann Brown pullets in a self-built wooden shed on his family's land, Kwame sold to neighbours and a handful of local restaurants.
                 </p>
                 <p>
                   The philosophy was simple: never cut corners on feed, biosecurity, or bird welfare. That philosophy — stubbornly maintained through difficult commodity price cycles and disease pressures — built a reputation that marketing money couldn't buy.
                 </p>
                 <p>
-                  Today FreshFlock operates 7 production houses, employs 12 full-time staff, and delivers to over 200 wholesale clients across Accra and beyond. The feed-first, quality-first ethos hasn't changed since day one.
+                  Today DarajatFarms operates 7 production houses, employs 12 full-time staff, and delivers to over 200 wholesale clients across Accra and beyond. The feed-first, quality-first ethos hasn't changed since day one.
                 </p>
               </div>
             </div>
@@ -92,7 +92,7 @@ export default function About() {
               <Eye size={32} className="mb-4 text-farm-yellow" />
               <h3 className="font-display text-2xl font-bold text-farm-dark mb-3">Our Vision</h3>
               <p className="text-farm-dark/70 leading-relaxed">
-                A future where every family in Ghana has consistent access to affordable, high-quality protein from a local farm they can trust — and where FreshFlock is synonymous with that trust across West Africa.
+                A future where every family in Ghana has consistent access to affordable, high-quality protein from a local farm they can trust — and where DarajatFarms is synonymous with that trust across West Africa.
               </p>
             </div>
           </div>
