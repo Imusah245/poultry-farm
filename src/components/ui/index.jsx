@@ -151,7 +151,7 @@ export function CTABanner({ title, subtitle, primaryLabel, primaryTo, secondaryL
           <div className="flex flex-wrap gap-4 justify-center relative z-10">
             <a href={primaryTo} className="btn-yellow">{primaryLabel}</a>
             {secondaryLabel && (
-              <a href={secondaryTo} className="btn-secondary !border-white !text-white hover:!bg-white/10">{secondaryLabel}</a>
+              <a href={secondaryTo} className="btn-secondary !border-white/60 !text-white !bg-white/10 hover:!bg-white/20">{secondaryLabel}</a>
             )}
           </div>
         </div>

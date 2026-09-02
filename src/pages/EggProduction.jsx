@@ -54,7 +54,7 @@ export default function EggProduction() {
         cta={
           <>
             <a href="/contact" className="btn-yellow">Order Eggs</a>
-            <a href="/contact" className="btn-secondary !border-white !text-white hover:!bg-white/10">Wholesale Inquiry</a>
+            <a href="/contact" className="btn-secondary !border-white/60 !text-white !bg-white/10 hover:!bg-white/20">Wholesale Inquiry</a>
           </>
         }
       />
@@ -99,7 +99,7 @@ export default function EggProduction() {
       {/* Quality Assurance */}
       <section className="section">
         <div className="container-max">
-          <SectionHeader label="Quality Assurance" title="Why Our Eggs Are Different" subtitle="Six pillars of quality that make every FreshFlock egg exceptional." />
+          <SectionHeader label="Quality Assurance" title="Why Our Eggs Are Different" subtitle="Six pillars of quality that make every DarajatFarms egg exceptional." />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 reveal">
             {QA_FEATURES.map((f, i) => <FeatureCard key={i} {...f} />)}
           </div>

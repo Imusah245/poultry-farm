@@ -37,7 +37,7 @@ export default function BroilerProduction() {
         cta={
           <>
             <a href="/contact" className="btn-yellow">Order Broilers</a>
-            <a href="/partnerships" className="btn-secondary !border-white !text-white hover:!bg-white/10">Bulk Pricing</a>
+            <a href="/partnerships" className="btn-secondary !border-white/60 !text-white !bg-white/10 hover:!bg-white/20">Bulk Pricing</a>
           </>
         }
       />
