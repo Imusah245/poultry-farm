@@ -134,10 +134,10 @@ describe('Feature: poultry-farm-backend, Property 14: Seed script idempotence', 
     // Fixed seed data matching the actual seed script structure
     const seedData = {
       company: {
-        name: 'FreshFlock Farms',
+        name: 'DarajatFarms',
         tagline: 'Fresh Eggs & Quality Broilers You Can Trust',
         phone: '+233 20 000 0000',
-        email: 'info@freshflockfarms.com',
+        email: 'barhoumtech@gmail.com',
         address: 'Accra, Greater Accra Region, Ghana',
         founded: 2010,
       },
@@ -178,7 +178,7 @@ describe('Feature: poultry-farm-backend, Property 14: Seed script idempotence', 
         { date: new Date('2024-01-02'), eggsProduced: 11450, birdsAvailable: 8420, feedStockTonnes: 4.2 },
       ],
       adminUser: {
-        email: 'admin@freshflockfarms.com',
+        email: 'admin@darajatfarms.com',
         password: 'Admin1234',
         name: 'Admin',
         role: 'admin',

@@ -79,7 +79,7 @@ describe('Auth Middleware - protect', () => {
   });
 
   it('should call next() and attach decoded user when token is valid', () => {
-    const payload = { id: 'user123', email: 'admin@freshflock.com', role: 'admin' };
+    const payload = { id: 'user123', email: 'admin@darajatfarms.com', role: 'admin' };
     const validToken = jwt.sign(payload, JWT_SECRET, { expiresIn: '1h' });
     req.headers.authorization = `Bearer ${validToken}`;
 
@@ -89,7 +89,7 @@ describe('Auth Middleware - protect', () => {
     expect(res.status).not.toHaveBeenCalled();
     expect(req.user).toBeDefined();
     expect(req.user.id).toBe('user123');
-    expect(req.user.email).toBe('admin@freshflock.com');
+    expect(req.user.email).toBe('admin@darajatfarms.com');
     expect(req.user.role).toBe('admin');
   });
 

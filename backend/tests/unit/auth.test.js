@@ -36,7 +36,7 @@ const mockNext = jest.fn();
 describe('Auth Controller', () => {
   describe('register', () => {
     const validData = {
-      email: 'admin@freshflock.com',
+      email: 'admin@darajatfarms.com',
       password: 'password123',
       name: 'Admin User',
     };
@@ -124,7 +124,7 @@ describe('Auth Controller', () => {
 
   describe('login', () => {
     const userData = {
-      email: 'admin@freshflock.com',
+      email: 'admin@darajatfarms.com',
       password: 'password123',
       name: 'Admin User',
     };

@@ -98,34 +98,34 @@ describe('Contact Model', () => {
 describe('CompanyInfo Model', () => {
   it('should create company info with valid fields', async () => {
     const info = await CompanyInfo.create({
-      name: 'FreshFlock Farms',
+      name: 'DarajatFarms',
       tagline: 'Premium poultry products',
       phone: '+233 123 456',
-      email: 'info@freshflock.com',
+      email: 'info@darajatfarms.com',
       address: 'Accra, Ghana',
       founded: 2015,
     });
 
-    expect(info.name).toBe('FreshFlock Farms');
+    expect(info.name).toBe('DarajatFarms');
     expect(info.tagline).toBe('Premium poultry products');
     expect(info.phone).toBe('+233 123 456');
-    expect(info.email).toBe('info@freshflock.com');
+    expect(info.email).toBe('info@darajatfarms.com');
     expect(info.address).toBe('Accra, Ghana');
     expect(info.founded).toBe(2015);
     expect(info.updatedAt).toBeInstanceOf(Date);
   });
 
   it('should implement singleton getOrCreate pattern', async () => {
-    const defaults = { name: 'FreshFlock Farms', tagline: 'Farm fresh' };
+    const defaults = { name: 'DarajatFarms', tagline: 'Farm fresh' };
 
     // First call creates
     const first = await CompanyInfo.getOrCreate(defaults);
-    expect(first.name).toBe('FreshFlock Farms');
+    expect(first.name).toBe('DarajatFarms');
 
     // Second call returns the same document
     const second = await CompanyInfo.getOrCreate({ name: 'Other Name' });
     expect(second._id.toString()).toBe(first._id.toString());
-    expect(second.name).toBe('FreshFlock Farms'); // Original name preserved
+    expect(second.name).toBe('DarajatFarms'); // Original name preserved
   });
 
   it('should fail without required name field', async () => {
