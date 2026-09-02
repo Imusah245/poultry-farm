@@ -8,7 +8,7 @@ const CompanyInfo = require('../models/CompanyInfo');
 const getCompanyInfo = async (req, res, next) => {
   try {
     const company = await CompanyInfo.getOrCreate({
-      name: 'FreshFlock Farms',
+      name: 'DarajatFarms',
     });
     res.json(company);
   } catch (err) {

@@ -15,17 +15,17 @@ const ProductionRecord = require('../src/models/ProductionRecord');
 // ── Seed Data ────────────────────────────────────────────────────────────────
 
 const companyData = {
-  name: 'FreshFlock Farms',
+  name: 'DarajatFarms',
   tagline: 'Fresh Eggs & Quality Broilers You Can Trust',
   phone: '+233 20 000 0000',
-  email: 'info@freshflockfarms.com',
+  email: 'barhoumtech@gmail.com',
   address: 'Accra, Greater Accra Region, Ghana',
   founded: 2010,
 };
 
 const testimonialsData = [
   {
-    quote: 'FreshFlock has been our trusted egg supplier for 3 years. Consistent quality and always on time.',
+    quote: 'DarajatFarms has been our trusted egg supplier for 3 years. Consistent quality and always on time.',
     author: 'Kofi Mensah',
     role: 'Restaurant Owner, Accra',
     initials: 'KM',
@@ -155,7 +155,7 @@ function getProductionRecords() {
 }
 
 const adminUserData = {
-  email: 'admin@freshflockfarms.com',
+  email: 'admin@darajatfarms.com',
   password: 'Admin1234',
   name: 'Admin',
   role: 'admin',
@@ -218,7 +218,7 @@ async function seed() {
       console.warn('⚠ Admin user already exists — skipping');
     } else {
       await User.create(adminUserData);
-      console.log('✓ Admin user seeded (admin@freshflockfarms.com)');
+      console.log('✓ Admin user seeded (admin@darajatfarms.com)');
     }
 
     console.log('\nSeeding complete!');
