@@ -60,13 +60,27 @@ const TIERS = [
   },
 ]
 
+function isValidGhanaPhone(phone) {
+  if (!phone || phone.trim() === '') return true
+  const stripped = phone.replace(/[\s\-()]/g, '')
+  if (/^\+233[1-9]\d{8}$/.test(stripped)) return true
+  if (/^0[1-9]\d{8}$/.test(stripped)) return true
+  return false
+}
+
 export default function Partnerships() {
   const [form, setForm] = useState({ name: '', company: '', email: '', phone: '', type: '', volume: '', message: '' })
   const [sent, setSent] = useState(false)
+  const [phoneError, setPhoneError] = useState('')
   const ref = useScrollReveal()
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    if (form.phone && !isValidGhanaPhone(form.phone)) {
+      setPhoneError('Please enter a valid Ghanaian number (+233 XX XXX XXXX or 0XX XXX XXXX)')
+      return
+    }
+    setPhoneError('')
     setSent(true)
   }
 
@@ -172,7 +186,7 @@ export default function Partnerships() {
             <div className="card p-10 text-center reveal">
               <div className="text-5xl mb-4">✅</div>
               <h3 className="font-display text-2xl font-bold text-farm-dark mb-2">Inquiry Received!</h3>
-              <p className="text-farm-dark/60">We'll be in touch within 24 hours. Thank you for your interest in partnering with FreshFlock.</p>
+              <p className="text-farm-dark/60">We'll be in touch within 24 hours. Thank you for your interest in partnering with DarajatFarms.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="card p-8 space-y-5 reveal">
@@ -190,9 +204,13 @@ export default function Partnerships() {
                       type={field.type}
                       placeholder={field.placeholder}
                       value={form[field.id]}
-                      onChange={e => setForm(f => ({ ...f, [field.id]: e.target.value }))}
+                      onChange={e => {
+                        setForm(f => ({ ...f, [field.id]: e.target.value }))
+                        if (field.id === 'phone') setPhoneError('')
+                      }}
                       className="w-full px-4 py-2.5 rounded-xl border border-farm-green-pale text-sm focus:outline-none focus:ring-2 focus:ring-farm-green/30 focus:border-farm-green transition"
                     />
+                    {field.id === 'phone' && phoneError && <p className="text-amber-600 text-xs mt-1">{phoneError}</p>}
                   </div>
                 ))}
               </div>
