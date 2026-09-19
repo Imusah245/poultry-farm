@@ -10,8 +10,18 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+// CORS: allow configured frontend origin, or all origins if not set
+const allowedOrigin = process.env.CORS_ORIGIN;
+app.use(cors({
+  origin: allowedOrigin ? allowedOrigin.split(',').map(o => o.trim()) : true,
+  credentials: true,
+}));
 app.use(express.json());
+
+// Health check
+app.get('/', (req, res) => {
+  res.json({ status: 'ok', service: 'DarajatFarms API' });
+});
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
