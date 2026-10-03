@@ -20,7 +20,7 @@ app.use(express.json());
 
 // Health check
 app.get('/', (req, res) => {
-  res.json({ status: 'ok', service: 'DarajatFarms API' });
+  res.json({ status: 'ok', service: 'ifarms API' });
 });
 
 // Routes
