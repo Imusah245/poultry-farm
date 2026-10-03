@@ -1,7 +1,7 @@
 // ── Site Data ────────────────────────────────────────────────────────────────
 
 export const COMPANY = {
-  name:    'DarajatFarms',
+  name:    'ifarms',
   tagline: 'Fresh Eggs & Quality Broilers You Can Trust',
   phone:   '+233 20 000 0000',
   email:   'barhoumtech@gmail.com',
@@ -18,7 +18,7 @@ export const STATS = [
 
 export const TESTIMONIALS = [
   {
-    quote:   'DarajatFarms has been our trusted egg supplier for 3 years. Consistent quality and always on time.',
+    quote:   'ifarms has been our trusted egg supplier for 3 years. Consistent quality and always on time.',
     author:  'Kofi Mensah',
     role:    'Restaurant Owner, Accra',
     initials:'KM',

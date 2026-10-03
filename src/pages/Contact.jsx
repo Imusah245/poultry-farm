@@ -142,7 +142,7 @@ export default function Contact() {
               {/* Map embed */}
               <div className="card overflow-hidden h-56 reveal">
                 <iframe
-                  title="DarajatFarms Location"
+                  title="ifarms Location"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254682.35084014027!2d-0.3536258!3d5.5912702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9084b2ad7a4d%3A0xbed14f2d4c9c9955!2sAccra%2C%20Ghana!5e0!3m2!1sen!2s!4v1713000000000!5m2!1sen!2s"
                   width="100%"
                   height="100%"

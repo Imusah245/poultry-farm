@@ -99,7 +99,7 @@ export default function EggProduction() {
       {/* Quality Assurance */}
       <section className="section">
         <div className="container-max">
-          <SectionHeader label="Quality Assurance" title="Why Our Eggs Are Different" subtitle="Six pillars of quality that make every DarajatFarms egg exceptional." />
+          <SectionHeader label="Quality Assurance" title="Why Our Eggs Are Different" subtitle="Six pillars of quality that make every ifarms egg exceptional." />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 reveal">
             {QA_FEATURES.map((f, i) => <FeatureCard key={i} {...f} />)}
           </div>

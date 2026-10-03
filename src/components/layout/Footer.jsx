@@ -32,7 +32,7 @@ export default function Footer() {
                 <Egg size={18} className="text-white" />
               </span>
               <div>
-                <span className="font-display font-bold text-lg leading-none block">Darajat</span>
+                <span className="font-display font-bold text-lg leading-none block">i</span>
                 <span className="text-[10px] font-semibold tracking-widest uppercase text-farm-yellow leading-none">Farms</span>
               </div>
             </div>
@@ -71,7 +71,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/40 text-xs">© {new Date().getFullYear()} DarajatFarms. All rights reserved.</p>
+          <p className="text-white/40 text-xs">© {new Date().getFullYear()} ifarms. All rights reserved.</p>
           <div className="flex items-center gap-3">
             {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
               <a key={i} href="#" className="w-8 h-8 rounded-lg bg-white/10 hover:bg-farm-green flex items-center justify-center transition-colors">

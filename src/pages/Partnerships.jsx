@@ -186,7 +186,7 @@ export default function Partnerships() {
             <div className="card p-10 text-center reveal">
               <div className="text-5xl mb-4">✅</div>
               <h3 className="font-display text-2xl font-bold text-farm-dark mb-2">Inquiry Received!</h3>
-              <p className="text-farm-dark/60">We'll be in touch within 24 hours. Thank you for your interest in partnering with DarajatFarms.</p>
+              <p className="text-farm-dark/60">We'll be in touch within 24 hours. Thank you for your interest in partnering with ifarms.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="card p-8 space-y-5 reveal">

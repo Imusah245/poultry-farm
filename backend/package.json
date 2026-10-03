@@ -1,7 +1,7 @@
 {
-  "name": "darajatfarms-backend",
+  "name": "ifarms-backend",
   "version": "1.0.0",
-  "description": "DarajatFarms backend API server",
+  "description": "ifarms backend API server",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
